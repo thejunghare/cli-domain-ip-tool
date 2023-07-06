@@ -15,6 +15,9 @@ var filePath string
 var findCmd = &cobra.Command{
 	Use:   "find",
 	Short: "Find IP address of domain",
+	Long: "Find retrieves input from the.txt file and displays the IP address of the domains.\n" +
+		"Example to use cmd:\n" +
+		"domain find --file filename.txt",
 	Run: func(cmd *cobra.Command, args []string) {
 		// open the file
 		file, err := os.Open(filePath)
@@ -27,7 +30,7 @@ var findCmd = &cobra.Command{
 
 		// Print content of file
 		// domain -> ip
-		for scanner.Scan(){
+		for scanner.Scan() {
 			ip, _ := net.LookupIP(scanner.Text())
 			// fmt.Println(scanner.Text())
 			fmt.Println(ip)
