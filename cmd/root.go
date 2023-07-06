@@ -2,7 +2,7 @@ package cmd
 
 import "github.com/spf13/cobra"
 
-var rootCmd = &cobra.Command{
-	Use : "Find ip",
-	Short : "Find ip form domain",
+var RootCmd = &cobra.Command{
+	Use:   "Domain",
+	Short: "Find ip address of domain",
 }

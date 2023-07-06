@@ -1,9 +1,9 @@
 package main
 
 import (
-	"github.com/thejunghare/domain-tool/cmd"
+	"github.com/thejunghare/domain/cmd"
 )
 
 func main() {
-	cmd.rootCmd.Execute()
+	cmd.RootCmd.Execute()
 }
